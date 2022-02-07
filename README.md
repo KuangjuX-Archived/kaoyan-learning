@@ -1,2 +1,2 @@
 # kaoyan-notes
-考研笔记
+KuangjuX 在备战考研期间所做的笔记
