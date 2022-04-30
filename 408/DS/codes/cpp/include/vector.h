@@ -1,3 +1,6 @@
+#include <cstdlib>
+#include <algorithm>
+
 typedef int Rank;
 
 #define DEFAULT_CAPACITY 3
@@ -53,9 +56,11 @@ public:
     void sort() { sort(0, _size); }
     void unsort(Rank lo, Rank hi); // 对 [lo, hi) 置乱
     void unsort() { unsort(0, _size); }
-    int dedulicate(); // 无序去重
+    int deduplicate(); // 无序去重
     int uniquify(); // 有序去重
     // 遍历
     void traverse( void(*)(T&)); // 遍历(使用函数指针，只读或局部性修改)
-    template <typename VST> void tracerse(VST&); // 遍历(使用函数对象，可全局性修改)
+    template <typename VST> void traverse(VST&); // 遍历(使用函数对象，可全局性修改)
+
+    
 };
